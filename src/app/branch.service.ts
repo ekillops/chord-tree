@@ -11,5 +11,13 @@ export class BranchService {
   getBranches(): Branch[] {
     return BRANCHES;
   }
-  
+
+  getBranchById(targetId: number): Branch {
+    for (let i = 0; i < BRANCHES.length; i++) {
+      if (BRANCHES[i].id === targetId) {
+        return BRANCHES[i];
+      }
+    }
+  }
+
 }
