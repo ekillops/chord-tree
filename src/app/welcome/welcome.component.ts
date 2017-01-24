@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TreeComponent } from '../tree/tree.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -8,6 +9,10 @@ import { TreeComponent } from '../tree/tree.component';
 })
 export class WelcomeComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goToBranch(branchId: number): void {
+    this.router.navigate(['branches', branchId]);
+  }
 
 }

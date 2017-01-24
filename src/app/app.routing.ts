@@ -10,7 +10,7 @@ const appRoutes: Routes = [
 },
 
 {
-  path: 'tree/:id',
+  path: 'branches/:id',
   component: TreeComponent
 }
 
