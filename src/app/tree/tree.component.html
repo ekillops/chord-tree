@@ -1,5 +1,8 @@
-<p>
-  tree works!
-</p>
+<img src={{branchToDisplay.imagePath}} />
 
-{{branchToDisplay.id}}
+
+<button *ngIf="branchToDisplay.choiceOne" type="button" name="button" (click)="goToDetailPage(pathOneId)" class="btn btn-success" >{{branchToDisplay.choiceOne}}</button>
+
+<button *ngIf="branchToDisplay.choiceTwo" type="button" name="button" (click)="goToDetailPage(pathTwoId)" class="btn btn-success" >{{branchToDisplay.choiceTwo}}</button>
+
+<a *ngIf="branchToDisplay.audioPath" href={{branchToDisplay.audioPath}}>Listen to your chord progression!</a>

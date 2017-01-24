@@ -22,14 +22,14 @@ export class TreeComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach((urlParamatersArray) => {
       this.branchId = parseInt(urlParamatersArray['id']);
+      this.branchToDisplay = this.branchService.getBranchById(this.branchId);
+      this.pathOneId = this.branchToDisplay.id + this.branchToDisplay.choiceOne;
+      this.pathTwoId = this.branchToDisplay.id + this.branchToDisplay.choiceTwo;
     });
-    this.branchToDisplay = this.branchService.getBranchById(this.branchId);
-    this.pathOneId = this.branchToDisplay.id + this.branchToDisplay.choiceOne;
-    this.pathTwoId = this.branchToDisplay.id + this.branchToDisplay.choiceTwo;
   }
 
-  goToDetailPage(clickedBranch: Branch) {
-   this.router.navigate(['branches', clickedBranch.id]);
+  goToDetailPage(targetId: string) {
+   this.router.navigate(['branches', targetId]);
  }
 
 }
