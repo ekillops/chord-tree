@@ -1,8 +1,19 @@
-<p>
-  Welcome to Chord Tree. This app will allow you to build a musical chord progression. You don't have to know any theory. Just click the buttons to choose your chords and at the end you can listen to the progression you created!
-</p>
-
-<h2> Choose your starting chord </h2>
-<button type="button" class="btn btn-success" (click)="goToBranch(1)">C Major</button>
-<button type="button" class="btn btn-success" (click)="goToBranch(4)">F Major</button>
-<button type="button" class="btn btn-success" (click)="goToBranch(2)">D Minor</button>
+<div class="row">
+   <div class="col s12 m12">
+     <div class="card green lighten-2">
+       <div class="card-content white-text">
+         <span class="cardTitle">Welcome</span>
+         <br><br>
+         <p>We've made it simple for you to build a musical chord progression.</p>
+         <br>
+       <p>Just click the buttons to choose your chords and at the end you can listen to the progression you created!</p>
+       </div>
+       <div class="card-action">
+         <a class="btn btn-success" (click)="goToBranch(1)">C Major</a>
+         <a class="btn btn-success" (click)="goToBranch(4)">F Major</a>
+         <a class="btn btn-success" (click)="goToBranch(2)">D Minor</a>
+       </div>
+       <img src="../assets/images/piano.png" class="resizePiano"/>
+     </div>
+   </div>
+ </div>

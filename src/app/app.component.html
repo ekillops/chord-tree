@@ -1,12 +1,15 @@
 
-<nav>
-  <div class="nav-wrapper">
-    <h1 class="centerTitle">
-      <a href="/">{{title}}</a>
-    </h1>
-  </div>
+<nav class="centerTitle addOpacity">
+    {{title}}
 </nav>
-
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+<footer class="page-footer footer">
+  <div class="footer-copyright">
+    <div class="container">
+    <h5 class="white-text formatLink"><a href="/">New Progression</a></h5>
+    </div>
+  </div>
+</footer>

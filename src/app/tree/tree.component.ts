@@ -19,6 +19,30 @@ export class TreeComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private branchService: BranchService) { }
 
+   chordToText(chordNumber: string): string {
+      if(chordNumber === '1') {
+         return "C Major";
+       }
+      else if(chordNumber === '2') {
+        return "D Minor";
+      }
+      else if (chordNumber === '3') {
+        return "E Minor";
+      }
+      else if(chordNumber === '4') {
+        return "F Major";
+      }
+      else if(chordNumber === '5') {
+        return "G Major";
+      }
+      else if(chordNumber === '6') {
+        return "A Minor";
+      }
+      else if(chordNumber === '7') {
+        return "B Diminished";
+      }
+   }
+
   ngOnInit() {
     this.route.params.forEach((urlParamatersArray) => {
       this.branchId = parseInt(urlParamatersArray['id']);
@@ -28,7 +52,7 @@ export class TreeComponent implements OnInit {
     });
   }
 
-  goToDetailPage(targetId: string) {
+  goToDetailPage(targetId: string): void {
    this.router.navigate(['branches', targetId]);
  }
 

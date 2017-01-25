@@ -1,6 +1,47 @@
 .centerTitle {
   text-align: center;
-  background-color: lightgreen;
   padding-top: 3%;
-  padding-bottom: 3%;
+  padding-bottom: 8%;
+  font-family: 'Maitree', serif;
+  font-size: 7em;
+}
+
+.centerTitle a {
+  text-decoration: none;
+}
+.centerTitle a:hover {
+  color: white;
+}
+
+.mainBody {
+  margin-top: 3%;
+  font-family: 'Cabin', sans-serif;
+  font-size: 2em;
+}
+
+.addOpacity {
+  background: rgba(27, 94, 32, .5);
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background: rgba(27, 94, 32, .5);
+  text-align: center;
+}
+
+.formatLink a {
+  color: white;
+    font-size: 2em;
+}
+
+.formatLink a:visited {
+  color: white;
+}
+
+.formatLink a:hover {
+  color: white;
 }

@@ -1,0 +1,19 @@
+.card-content {
+  font-size: 2em;
+}
+
+.card-image img {
+  width: 70%;
+  height: auto;
+  margin-top: 3%;
+  border-style: solid;
+  border-width: thick;
+  border-color: #43a047;
+}
+
+.card-image, .centerContent {
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

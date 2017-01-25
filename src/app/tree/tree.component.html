@@ -1,8 +1,21 @@
-<img src={{branchToDisplay.imagePath}} />
+<div class="row">
+  <div class="col s12 m12">
+    <div class="card green lighten-2">
+      <div class="card-image">
+        <img src={{branchToDisplay.imagePath}} />
+      </div>
+      <div class="centerContent">
+        <div class="card-content white-text">
+          <p>Choose your next chord:</p>
 
-
-<button *ngIf="branchToDisplay.choiceOne" type="button" name="button" (click)="goToDetailPage(pathOneId)" class="btn btn-success" >{{branchToDisplay.choiceOne}}</button>
-
-<button *ngIf="branchToDisplay.choiceTwo" type="button" name="button" (click)="goToDetailPage(pathTwoId)" class="btn btn-success" >{{branchToDisplay.choiceTwo}}</button>
-
-<a *ngIf="branchToDisplay.audioPath" href={{branchToDisplay.audioPath}}>Listen to your chord progression!</a>
+        </div>
+        <br><br>
+        <div class="card-action">
+          <a class="btn btn-success" *ngIf="branchToDisplay.choiceOne" type="button" name="button" (click)="goToDetailPage(pathOneId)" >{{chordToText(branchToDisplay.choiceOne)}}</a>
+          <a class="btn btn-success" *ngIf="branchToDisplay.choiceTwo" type="button" name="button" (click)="goToDetailPage(pathTwoId)" >{{chordToText(branchToDisplay.choiceTwo)}}</a>
+          <a class="btn btn-info" *ngIf="branchToDisplay.audioPath" href={{branchToDisplay.audioPath}}>Listen to your chord progression!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
